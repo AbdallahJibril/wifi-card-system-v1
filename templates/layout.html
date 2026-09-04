@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">    
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.scc">
+</head>
+<body>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash-message">
+          {{ messages[0] }}
+        </div>
+      {% endif %}
+      
+    {% endwith %}
+      
+      <div class="manyu">
+        <ul>
+        <li><a href="{{ url_for('from_sidebar',action='Homepage') }}">الصفحه الرئيسيه </a></li>
+        <li><a href="{{ url_for('from_sidebar',action='settings') }}">الاعدادات</a></li>
+        <li><a href="{{ url_for('from_sidebar',action='add_admin') }}">اضافه ادمن</a></li>
+        <li><a href="{{ url_for('from_sidebar',action='add_code') }}">اضافه اكواد</a></li>
+        <!-- <li><a href="{{ url_for('from_sidebar',action='disable_code') }}">تعطيل اكواد </a></li>
+        <li><a href="{{ url_for('from_sidebar',action='disable_admin') }}">تعطيل ادمن</a></li> -->
+        <li><a href="{{ url_for('from_sidebar',action='log_out') }}">تسجيل خروج</a>
+        </ul>
+    </div> 
+
+    {% block body %}
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1> صفحه الادمن </h1>
+
+<div class="form-container">
+  <form action="/admin_choose" method="post" class="product-form">
+    <div class="product-form2">
+      {% for i in Choose %}
+        <label class="radio-item">
+          <input type="radio" name="Choose" value="{{ i }}" onchange="this.form.submit()" required>
+          <span>{{ i }}</span>
+        </label>
+      {% endfor %}
+    </div>
+  </form>
+</div>
+
+{% endblock %}

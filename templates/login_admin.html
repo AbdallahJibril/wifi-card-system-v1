@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="lang="ar dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash-message">
+          {{ messages[0] }}
+        </div>
+      {% endif %}
+      
+    {% endwith %}
+    <div class="login_admin">
+        <form action="/to_admin" method="post">
+            <h2>تسجيل الدخول لصفحه الادمن</h2>
+            <input type="text" name="username" placeholder="ادخل الاسم" required>
+            <input type="password" name="password" placeholder="ادخل كلمه السر" required>
+            <button type="submit">دخول</button>
+        </form>
+    </div>
+</body>
+</html>

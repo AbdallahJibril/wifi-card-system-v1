@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="table-container">
+  <table class="custom-table">
+    <caption>السجل</caption>
+    <thead>
+      <tr>
+        <th>العمليه</th>
+        <th>تاريخ العمليه</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in data2 %}
+        <tr>
+          <td>{{ i.detals }}</td>
+          <td>{{ i.add_time }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

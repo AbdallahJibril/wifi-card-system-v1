@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+    <h1> الاعدادات</h1>
+
+<div class="form-container">
+  <form action="/settimgs" method="post" class="product-form">
+    <div class="product-form2">
+      {% for i in settings_Choose %}
+        <label class="radio-item">
+          <input type="radio" name="choice" value="{{ i }}" onchange="this.form.submit()" required>
+          <span>{{ i }}</span>
+        </label>
+      {% endfor %}
+    </div>
+  </form>
+</div>
+
+{% endblock %}

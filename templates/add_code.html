@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="add_admin_form_1">
+  <h2>اضافه كود جديد</h2>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash-message">
+          {{ messages[0] }}
+        </div>
+      {% endif %}
+      
+    {% endwith %}
+
+  <form action="/add_code" method="post" class="add_code">
+    <div class="add_code">
+        <label class="radio-item">
+          <input type="number" name="Number_of_codes"  required placeholder="عدد الاكواد ">
+          <input type="number" name="Number_of_numbers"  required placeholder="طول الكود لا يقل ع 6"> 
+          <input type="number" name="max_uses"  required placeholder="عدد الاستخدمات ">
+          <input type="number" name="duratlon_minutes"  required placeholder="وقت استخدام الكود بالدقيقه">
+        </label>
+    </div>
+    <button type="submit">تم</button>
+  </form>
+</div>
+{% endblock %}
