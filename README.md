@@ -36,5 +36,5 @@ A monolithic backend and management system built for generating, tracking, and a
 2. Setup Database:
 ​Create a new database in MySQL/phpMyAdmin.
 ​Import the provided structure file (my_wi_fi.sql) into your database.
-3. Run the Application:python app.py
+3. Run the Application:python app_old.py
 
