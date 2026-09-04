@@ -33,3 +33,8 @@ A monolithic backend and management system built for generating, tracking, and a
    ```bash
    git clone [https://github.com/AbdallahJibril/wifi-card-system-v1.git](git@github.com:AbdallahJibril/wifi-card-system-v1.git)
    cd wifi-card-system-v1
+2. Setup Database:
+​Create a new database in MySQL/phpMyAdmin.
+​Import the provided structure file (database.sql) into your database.
+3. Run the Application:python app.py
+
