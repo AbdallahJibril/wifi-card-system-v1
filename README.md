@@ -31,5 +31,5 @@ A monolithic backend and management system built for generating, tracking, and a
 
 1. **Clone the Repository:**
    ```bash
-   git clone []()
-   cd wifi-manager-monolith
+   git clone [https://github.com/AbdallahJibril/wifi-card-system-v1.git](git@github.com:AbdallahJibril/wifi-card-system-v1.git)
+   cd wifi-card-system-v1
